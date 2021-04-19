@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <title>Go-Covid19 Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6"> <h2> <b> Covid19 Tracker</b> <img src="assets/coronavirus.png" alt="" width="40px" style="margin-top: 10px;"></h2><hr></div>
+        </div>
+    </div>
+
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-md-6"><img src="assets/worldwide.png" alt="world" width="80px" style="margin-top: -15px;">&nbsp;
+                <label for="world" class="ml-3">
+                    <h6>Confirmed: <label id="world-confirmed"></label></h6>
+                    <h6>Death: <label id="world-death"></label></h6>
+                </label>
+            </div>
+            <div class="col-md-6 py-5"><img src="assets/india.png" alt="world" width="100px" style="margin-top: -80px;">&nbsp;
+                <label for="india" class="ml-3">
+                    <h6>Confirmed: <label id="india-confirmed"></label></h6>
+                    <h6>Death: <label id="india-death"></label></h6>
+                    <h6>Recovered: <label id="india-recovered"></label></h6>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <label for=""><h3>Search by Country</h3></label>
+                <div class="input-group input-group-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-lg">Country</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Enter country name" id="country">
+                  </div>
+                  <button class="btn btn-primary mt-3" onclick="getData()">Search</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-group">
+                    <li class="list-group-item">Country: <label id="c-name"></label></li>
+                    <li class="list-group-item">Confirmed: <label id="c-confirm"></label></li>
+                    <li class="list-group-item">Death: <label id="c-death"></label></li>
+                    <li class="list-group-item">Recover: <label id="c-recover"></label></li>
+                </ul>
+            </div>
+        </div>
+    </div><br><br>
+</body>
+</html>
