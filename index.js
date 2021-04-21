@@ -44,7 +44,8 @@ fetch("https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/total?country="
 	});
 
 function getData(){
-    var country = document.getElementById('country').value
+    var country = document.getElementById('sel').value
+	console.log(country)
     document.getElementById('c-name').innerHTML = country
     fetch("https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/total?country=" + country, {
 	"method": "GET",
